@@ -1,4 +1,4 @@
-if not game:IsLoaded() then game.Loaded:Wait() end
+
 local coreGui = game:GetService("CoreGui")
 local camera = workspace.CurrentCamera
 local drawingUI = Instance.new("ScreenGui")
