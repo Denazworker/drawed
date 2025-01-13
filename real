@@ -494,19 +494,7 @@ getgenv().isrenderobj = function(obj)
     if type(obj.Remove) ~= "function" then return false end
     return true
 end
-getgenv().getrenderproperty = function(thing, prop)
-    return thing[prop]
-end
-getgenv().setrenderproperty = function(thing, prop, val)
-    local success, err = pcall(function()
-        thing[prop] = val
-    end)
-    if not success and err then 
-        warn(err) 
-    end
-end
-setrenderproperty = getgenv().setrenderproperty
-getrenderproperty = getgenv().getrenderproperty
+
 isrenderobj = getgenv().isrenderobj
 getgenv().cleardrawcache = function()
     for _, child in pairs(drawingUI:GetChildren()) do
